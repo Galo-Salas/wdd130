@@ -1,8 +1,8 @@
 /* --- 1. COLOR AND FONT VARIABLE DEFINITIONS --- */
 :root {
-    --primary-color: #0d47a1; /* Usado para enlaces y texto principal */
-    --secondary-color: #ff9800; /* Usado para hover/acento */
-    --accent1-color: #264653; /* Dark Slate Blue - usado para las barras oscuras */
+    --primary-color: #0d47a1; /* USADA */
+    --secondary-color: #ff9800; /* USADA */
+    --accent1-color: #264653; 
     --accent2-color: #e9c46a; 
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -57,21 +57,20 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--primary-color); /* USO DE --primary-color */
+    color: var(--primary-color); /* USO DE VARIABLE */
     font-weight: bold;
     font-size: 1.1em;
     padding: 5px 0;
 }
 
 nav a:hover {
-    color: var(--secondary-color); /* USO DE --secondary-color */
+    color: var(--secondary-color); /* USO DE VARIABLE */
 }
 
 /* --- HERO DIV STYLING (The Overlays) --- */
 
 .hero {
     position: relative;
-    /* Usa la ruta que te funcionó, generalmente ../images/hero-rafting-bg.jpg */
     background-image: url('../images/hero-rafting-bg.jpg'); 
     background-size: cover;
     background-position: center;
@@ -129,7 +128,7 @@ nav a:hover {
 
 /* 5. Style Image inside Article (floated right) (CORREGIDO) */
 .hero article .article-image {
-    float: right; /* REQUISITO CRÍTICO: La imagen debe flotar a la derecha */
+    float: right; /* REQUISITO CORREGIDO */
     width: 125px; 
     height: auto;
     border: 1px solid var(--accent2-color); 
@@ -152,4 +151,42 @@ section {
     color: white;
     padding: 12px 20px;
     margin-top: 0; 
-    margin-bottom:
+    margin-bottom: 15px; 
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.history-section p {
+    text-align: justify;
+    padding: 0 10px; 
+    line-height: 1.6;
+    color: #444; 
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--accent1-color);
+    padding: 20px 20px; 
+    margin-top: 30px;
+    font-size: 0.9em;
+    background-color: #fff; 
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+}
