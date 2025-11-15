@@ -1,0 +1,184 @@
+/* --- 1. COLOR AND FONT VARIABLE DEFINITIONS --- */
+:root {
+    --primary-color: #0d47a1; 
+    --secondary-color: #ff9800; 
+    --accent1-color: #264653; /* Dark Slate Blue - usado para las barras oscuras */
+    --accent2-color: #e9c46a; 
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* --- 2. UNIVERSAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 3. BODY & GENERAL STYLES --- */
+body {
+    font-family: var(--body-font);
+    color: #333; 
+    background-color: #f8f8f8; 
+}
+
+/* --- 4. WIDTH LIMITATION AND CENTERING --- */
+header, main, footer {
+    max-width: 840px; 
+    width: 90%; 
+    margin: 0 auto; 
+    background-color: #fff; 
+}
+
+/* --- 5. HEADING STYLES --- */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: #fff; 
+}
+
+/* --- HEADER AND NAVIGATION --- */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px; 
+}
+
+.logo {
+    width: 120px; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+nav {
+    display: flex; 
+    gap: 20px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent1-color); 
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+
+/* --- HERO DIV STYLING (The Overlays) --- */
+
+.hero {
+    position: relative;
+    /* RUTA VERIFICADA: Asume que el archivo hero-rafting-bg.jpg está en ../images/ */
+    background-image: url('../images/hero-rafting-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 450px; /* CRÍTICO: Da altura al contenedor para que la imagen se vea */
+    width: 100%;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* 2. Style H1 (Top Bar Overlay) */
+.hero h1 {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 15px 20px; 
+    text-align: center;
+    background-color: var(--accent1-color); 
+    color: #fff; 
+    opacity: 0.9;
+    margin: 0; 
+    font-size: 2em; 
+    font-weight: bold; 
+    letter-spacing: 1.5px; 
+}
+
+/* 3. Style ARTICLE (Bottom Box Overlay) */
+.hero article {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 90%; 
+    max-width: 750px; 
+    margin: 0 5%; 
+    padding: 20px 25px; 
+    
+    background-color: var(--accent1-color); 
+    color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    
+    /* CRÍTICO: Soluciona el problema de fondo cuando se usa float */
+    overflow: hidden; 
+}
+
+/* 4. Style P (Paragraph inside the article) */
+.hero article p {
+    margin-right: 150px; 
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 0.95em;
+    text-align: justify; 
+    color: white; 
+}
+
+/* 5. Style Image inside Article (floated right) */
+.hero article .article-image {
+    float: right; /* CRÍTICO: La imagen flota a la derecha */
+    width: 125px; 
+    height: auto;
+    border: 1px solid var(--accent2-color); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    margin: 0 0 0 20px; 
+}
+
+/* --- CONTENT SECTION STYLES (History and Adventure sections) --- */
+
+.history-section h2, .adventure-section h2 {
+    text-align: center;
+    background-color: var(--accent1-color); 
+    color: white;
+    padding: 12px 20px;
+    margin-top: 0; 
+    margin-bottom: 15px; 
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.history-section p {
+    text-align: justify;
+    padding: 0 10px; 
+    line-height: 1.6;
+    color: #444; 
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--accent1-color);
+    padding: 20px 20px; 
+    margin-top: 30px;
+    font-size: 0.9em;
+    background-color: #fff; 
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+}
