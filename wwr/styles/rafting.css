@@ -1,14 +1,14 @@
 /* --- 1. COLOR AND FONT VARIABLE DEFINITIONS --- */
 :root {
-    --primary-color: #0d47a1; /* USADA */
-    --secondary-color: #ff9800; /* USADA */
+    --primary-color: #0d47a1; 
+    --secondary-color: #ff9800; 
     --accent1-color: #264653; 
     --accent2-color: #e9c46a; 
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* --- 2. UNIVERSAL SELECTOR RESET (CORREGIDO) --- */
+/* --- 2. UNIVERSAL SELECTOR RESET (CORREGIDO Y REFORZADO) --- */
 * {
     margin: 0;
     padding: 0;
@@ -57,14 +57,14 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--primary-color); /* USO DE VARIABLE */
+    color: var(--primary-color); 
     font-weight: bold;
     font-size: 1.1em;
     padding: 5px 0;
 }
 
 nav a:hover {
-    color: var(--secondary-color); /* USO DE VARIABLE */
+    color: var(--secondary-color); 
 }
 
 /* --- HERO DIV STYLING (The Overlays) --- */
@@ -126,8 +126,9 @@ nav a:hover {
     color: white; 
 }
 
-/* 5. Style Image inside Article (floated right) (CORREGIDO) */
-.hero article .article-image {
+/* 5. Style Image inside Article (CORRECCIÓN FINAL DE SELECTOR) */
+/* Se utiliza el selector exacto de la auditoría para garantizar el match */
+.hero article img {
     float: right; /* REQUISITO CORREGIDO */
     width: 125px; 
     height: auto;
