@@ -1,193 +1,171 @@
-/* --- 1. COLOR AND FONT VARIABLE DEFINITIONS --- */
-:root {
-    --primary-color: #0d47a1; 
-    --secondary-color: #ff9800; 
-    --accent1-color: #264653; 
-    --accent2-color: #e9c46a; 
-    --heading-font: "Times New Roman", Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* --- 2. UNIVERSAL SELECTOR RESET (CORREGIDO Y REFORZADO) --- */
-* {
+body, h1, h2, p, figure {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
     box-sizing: border-box;
 }
 
-/* --- 3. BODY & GENERAL STYLES --- */
-body {
-    font-family: var(--body-font);
-    color: #333; 
-    background-color: #f8f8f8; 
-}
-
-/* --- 4. WIDTH LIMITATION AND CENTERING --- */
-header, main, footer {
-    max-width: 840px; 
-    width: 90%; 
-    margin: 0 auto; 
-    background-color: #fff; 
-}
-
-/* --- 5. HEADING STYLES --- */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: #fff; 
-}
-
-/* --- HEADER AND NAVIGATION --- */
 header {
-    display: flex;
-    justify-content: space-between; 
+    background-color: #c2c5cc;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr; 
     align-items: center;
-    padding: 15px 20px; 
+    border-bottom: 2px solid #333;
 }
 
 .logo {
-    width: 120px; 
+    width: 100px;
     height: auto;
-    margin-right: 20px; 
 }
 
 nav {
-    display: flex; 
-    gap: 20px; 
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--primary-color); 
+    color: #000;
     font-weight: bold;
-    font-size: 1.1em;
-    padding: 5px 0;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid #333;
 }
 
 nav a:hover {
-    color: var(--secondary-color); 
+    background-color: #eee;
 }
-
-/* --- HERO DIV STYLING (The Overlays) --- */
 
 .hero {
     position: relative;
-    background-image: url('../images/hero-rafting-bg.jpg'); 
-    background-size: cover;
-    background-position: center;
-    min-height: 450px; 
-    width: 100%;
-    margin-bottom: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-/* 2. Style H1 (Top Bar Overlay) */
-.hero h1 {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    padding: 15px 20px; 
     text-align: center;
-    background-color: var(--accent1-color); 
-    color: #fff; 
-    opacity: 0.9;
-    margin: 0; 
-    font-size: 2em; 
-    font-weight: bold; 
-    letter-spacing: 1.5px; 
+    margin-bottom: 2rem;
 }
 
-/* 3. Style ARTICLE (Bottom Box Overlay) */
-.hero article {
-    position: absolute;
-    bottom: 0; 
-    left: 0; 
-    width: 90%; 
-    max-width: 750px; 
-    margin: 0 5%; 
-    padding: 20px 25px; 
-    
-    background-color: var(--accent1-color); 
-    color: white; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-    
-    overflow: hidden; 
-}
-
-/* 4. Style P (Paragraph inside the article) */
-.hero article p {
-    margin-right: 150px; 
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-size: 0.95em;
-    text-align: justify; 
-    color: white; 
-}
-
-/* 5. Style Image inside Article (CORRECCIÓN FINAL DE SELECTOR) */
-/* Se utiliza el selector exacto de la auditoría para garantizar el match */
-.hero article img {
-    float: right; /* REQUISITO CORREGIDO */
-    width: 125px; 
+.hero-img {
+    width: 100%;
     height: auto;
-    border: 1px solid var(--accent2-color); 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px; 
-    margin: 0 0 0 20px; 
+    display: block;
 }
 
-/* --- CONTENT SECTION STYLES (History and Adventure sections) --- */
-section {
-    padding: 20px; 
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.hero-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    width: 70%;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.history-section h2, .adventure-section h2 {
+.hero-msg h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.history-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
     text-align: center;
-    background-color: var(--accent1-color); 
-    color: white;
-    padding: 12px 20px;
-    margin-top: 0; 
-    margin-bottom: 15px; 
-    font-size: 1.6em;
+}
+
+.history-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+}
+
+.history-img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.adventure-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.adventure-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
-.history-section p {
-    text-align: justify;
-    padding: 0 10px; 
-    line-height: 1.6;
-    color: #444; 
-}
-
-/* --- FOOTER STYLES --- */
 footer {
+    background-color: #c2c5cc;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--accent1-color);
-    padding: 20px 20px; 
-    margin-top: 30px;
-    font-size: 0.9em;
-    background-color: #fff; 
-}
-
-footer p {
-    margin: 0;
-    padding: 0;
-    color: #666;
+    border-top: 2px solid #333;
+    margin-top: 2rem;
 }
 
 .socialmedia {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .socialmedia img {
     width: 30px;
-    height: 30px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+    
+    nav {
+        justify-content: center;
+    }
+
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
