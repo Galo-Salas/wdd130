@@ -1,70 +1,131 @@
-* {
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
-    max-width: 840px;
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #000080;
+    padding: 1.5rem 0;
 }
 
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
 nav a {
     color: white;
-    display: block;
-    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-h1 {
-    color: darkblue;
+.page-title {
+    text-align: center;
+    color: #000080;
+    font-size: 2.5rem;
+    margin: 2rem 0;
 }
 
-aside {
-    position: relative;
-    width: 20rem;
+.content-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.sidebar-box {
+    background-color: #e6e6e6;
+    border: 1px solid #d0d0d0;
+    padding: 1.5rem;
     text-align: center;
 }
 
-aside h2 {
-    position: absolute;
-    top: 20px;
-    left: 70px;
+.sidebar-box h2 {
+    color: #000000;
+    margin-bottom: 1rem;
 }
 
-aside img {
-    width: 200px;
+.sidebar-img {
+    width: 100%;
     height: auto;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-main img {
+.caption {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.main-bio {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.profile-img {
     float: right;
-    width: 150px;
+    width: 180px;
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #bfbfbf;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
-p {
-    padding: 0;
+.main-bio::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.links-box {
+    background-color: #e6e6e6;
+    border: 1px solid #d0d0d0;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    clear: both;
+}
+
+.links-box ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.links-box li {
+    margin-bottom: 0.5rem;
+}
+
+.links-box a {
+    color: #551A8B;
+    text-decoration: underline;
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
     text-align: center;
+    margin: 4rem 0 2rem 0;
+    font-size: 1rem;
 }
 
-/* CSS class selectors */
-.box {
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    background-color: #ddd;
-    color: black;
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+    }
 }
-
