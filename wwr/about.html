@@ -38,7 +38,7 @@
 
             <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f81!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614311234567!5m2!1sen!2sau"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.570575304725!2d-120.88484432364243!3d38.80036665518063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809a63e6377759f1%3A0x6d9f757271846660!2sAmerican%20River%20Resort!5e0!3m2!1sen!2sus!4v1701300000000!5m2!1sen!2sus"
                     width="600" height="450" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
@@ -55,14 +55,21 @@
                 <fieldset>
                     <legend>Message Purpose</legend>
                     <div class="radio-group">
-                        <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                        <label for="general">
+                            <input type="radio" id="general" name="purpose" value="general" checked> General Inquiry
+                        </label>
+                        <label for="reservation">
+                            <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation
+                            Question
+                        </label>
+                        <label for="suggestion">
+                            <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
+                        </label>
                     </div>
                 </fieldset>
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
 
                 <div class="checkbox-group">
                     <input type="checkbox" id="newsletter" name="newsletter">
@@ -77,15 +84,15 @@
             <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
                 <figure>
-                    <img src="images/jane doe.jpg" alt="Jane Doe">
+                    <img src="images/jane-doe.jpg" alt="Jane Doe">
                     <figcaption>Jane Doe - Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/john smith.jpg" alt="John Smith">
+                    <img src="images/john-smith.jpg" alt="John Smith">
                     <figcaption>John Smith - Logistics</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/emily white.jpg" alt="Emily White">
+                    <img src="images/emily-white.jpg" alt="Emily White">
                     <figcaption>Emily White - Manager</figcaption>
                 </figure>
             </div>
@@ -93,14 +100,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 | Rafting Travel | Galo Salas</p>
+        <p>© 2025 | Rafting Travel | Galo Salas</p>
 
         <nav class="socialmedia">
             <a href="https://facebook.com">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
-            <a href="https://twitter.com">
-                <img src="images/linkedin.png" alt="Twitter">
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn">
             </a>
             <a href="https://instagram.com">
                 <img src="images/instagram.png" alt="Instagram">
