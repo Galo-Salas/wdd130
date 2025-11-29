@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Rafting Travel: Make Memories!</title>
+    <title>Contact Us | Rafting Travel: Make Memories!</title>
     <meta name="description"
-        content="Learn about Rafting Travel's history and mission to provide the best whitewater rafting adventures.">
+        content="Contact Rafting Travel for general inquiries, reservations, or website suggestions. We are here to serve you.">
     <meta name="author" content="Galo Salas">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -24,55 +24,69 @@
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/heroim.jpg" alt="Rafting Adventure" class="hero-img">
-
-            <h1>Rafting Travel: Make Memories!</h1>
-
-            <article>
-                <img src="images/main-rafting.jpg" alt="Happy client" class="article-img">
-                <p>Our goal is to provide you with the best experience possible. We have been providing unforgettable
-                    experiences for over 30 years. We are a family owned business dedicated to your adventure.</p>
-            </article>
-        </div>
-
-        <section class="history-section">
-            <h2>History</h2>
-            <div class="history-grid">
-                <p>Rafting Travel started floating the river in 1995 when a group of friends turned their passion into a
-                    business. Our commitment has always been simple: share the thrill of whitewater rafting while
-                    preserving the beauty of nature.</p>
-
-                <img src="images/historyy.jpg" alt="History of Rafting" class="history-img">
-
-                <p>From humble beginnings offering local trips, we have grown into a leading provider of comprehensive
-                    rafting expeditions worldwide. We believe in sustainable tourism and creating memories that last a
-                    lifetime.</p>
-            </div>
+        <section class="company-info">
+            <h1>White Water Rafting Company</h1>
+            <p>
+                123 Main River Street<br>
+                Kolob, California<br>
+                +1 999 999 9999<br>
+                info@whitewater.com
+            </p>
         </section>
 
-        <section class="adventure-section">
-            <h2>Adventure Awaits You!</h2>
-            <div class="adventure-grid">
+        <section class="contact-grid">
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f81!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614311234567!5m2!1sen!2sau"
+                    width="600" height="450" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <form action="#" method="get" class="contact-form">
+                <h2>Send Us a Message</h2>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <fieldset>
+                    <legend>Message Purpose</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
+                </fieldset>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </section>
+
+        <section class="employee-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
                 <figure>
-                    <img src="images/dientes.jpg" alt="Los Dientes del Diablo">
-                    <figcaption>Los Dientes del Diablo</figcaption>
+                    <img src="images/jane doe.jpg" alt="Jane Doe">
+                    <figcaption>Jane Doe - Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/bigma.jpg" alt="Big Mallard">
-                    <figcaption>Big Mallard</figcaption>
+                    <img src="images/john smith.jpg" alt="John Smith">
+                    <figcaption>John Smith - Logistics</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/halfway.jpg" alt="Half Day Adventure">
-                    <figcaption>Half Day Adventure</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/river.jpg" alt="River Run">
-                    <figcaption>River Run</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/sunset.jpg" alt="Sunset Rafting">
-                    <figcaption>Sunset Rafting</figcaption>
+                    <img src="images/emily white.jpg" alt="Emily White">
+                    <figcaption>Emily White - Manager</figcaption>
                 </figure>
             </div>
         </section>
